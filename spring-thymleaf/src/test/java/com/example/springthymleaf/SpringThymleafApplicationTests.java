@@ -1,10 +1,10 @@
-package com.example.self_study_java6;
+package com.example.springthymleaf;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SelfStudyJava6ApplicationTests {
+class SpringThymleafApplicationTests {
 
     @Test
     void contextLoads() {
