@@ -1,4 +1,4 @@
-package com.example.self_study_java6.entity;
+package entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
