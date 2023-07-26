@@ -8,10 +8,12 @@
 <body>
 <h1>Welcome to Thymlef</h1>
 <hr/>
+<p>menu</p>
 <th:block th:replace="~{/layout/menu.html}" />
 <ul>
   <li th:text="${message}"></li>
-  <li th:text="#{menu.home}"></li>
+  <h1 th:text="#{menu.home}"></h1>
+  <li th:text="#{menu.about}">Intro</li>
   <li th:utext="${message}"></li>
 </ul>
 <ul>

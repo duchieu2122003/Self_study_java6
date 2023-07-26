@@ -3,9 +3,9 @@ package com.example.springthymleaf;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.example.springthymleaf.entity.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.example.springthymleaf.entity.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,22 +19,21 @@ public class SpringThymleafApplication {
 
     public static void main(String[] args) throws IOException {
         SpringApplication.run(SpringThymleafApplication.class, args);
-        //demo10AstractClass();
 
     }
 
     static List<Student> list = Arrays.asList(new Student("Hieu", true, 9.0),
             new Student("A", true, 7.4), new Student("B", false, 8.5),
             new Student("C", false, 8.9), new Student("D", true, 2.0));
-
-    private static void demo10AstractClass() {
-        Canh c1 = new Canh(2);
-        Canh c2 = new Canh(5);
-        Hinh hinhChuNhat = new HinhChuNhat(c1,5,3);
-        Hinh hinhVuong = new HinhVuong(c2,5,5);
-        System.out.println("S HCN: " + hinhChuNhat.tinhDienTich());
-        System.out.println("S HV: " + hinhVuong.tinhDienTich());
-    }
+//
+//    private static void demo10AstractClass() {
+//        Canh c1 = new Canh(2);
+//        Canh c2 = new Canh(5);
+//        Hinh hinhChuNhat = new HinhChuNhat(c1,5,3);
+//        Hinh hinhVuong = new HinhVuong(c2,5,5);
+//        System.out.println("S HCN: " + hinhChuNhat.tinhDienTich());
+//        System.out.println("S HV: " + hinhVuong.tinhDienTich());
+//    }
 
     private static void demo9() throws IOException {
         //WRite JSON
