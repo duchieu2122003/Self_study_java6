@@ -1,4 +1,4 @@
-package entity;
+package com.example.springthymleaf.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

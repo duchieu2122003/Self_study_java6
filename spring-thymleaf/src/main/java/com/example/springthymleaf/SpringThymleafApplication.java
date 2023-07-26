@@ -3,14 +3,12 @@ package com.example.springthymleaf;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import entity.People0;
-import entity.Student;
+import com.example.springthymleaf.entity.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -20,8 +18,8 @@ import java.util.List;
 public class SpringThymleafApplication {
 
     public static void main(String[] args) throws IOException {
-         SpringApplication.run(SpringThymleafApplication.class, args);
-        //demo8();
+        SpringApplication.run(SpringThymleafApplication.class, args);
+        //demo10AstractClass();
 
     }
 
@@ -29,6 +27,14 @@ public class SpringThymleafApplication {
             new Student("A", true, 7.4), new Student("B", false, 8.5),
             new Student("C", false, 8.9), new Student("D", true, 2.0));
 
+    private static void demo10AstractClass() {
+        Canh c1 = new Canh(2);
+        Canh c2 = new Canh(5);
+        Hinh hinhChuNhat = new HinhChuNhat(c1,5,3);
+        Hinh hinhVuong = new HinhVuong(c2,5,5);
+        System.out.println("S HCN: " + hinhChuNhat.tinhDienTich());
+        System.out.println("S HV: " + hinhVuong.tinhDienTich());
+    }
 
     private static void demo9() throws IOException {
         //WRite JSON

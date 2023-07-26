@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Thymeleaf</title>
+</head>
+<body>
+<h1>Welcome to Thymlef</h1>
+<hr/>
+<th:block th:replace="~{/layout/menu.html}" />
+<ul>
+  <li th:text="${message}"></li>
+  <li th:text="#{menu.home}"></li>
+  <li th:utext="${message}"></li>
+</ul>
+<ul>
+  <li>[[${message}]]</li>
+</ul>
+<h2>[(${banner})]</h2>
+</body>
+</html>
