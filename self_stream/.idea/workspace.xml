@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f30f75d-7846-4900-bd16-e5c7f1871953" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/com/example/springthymleaf/SpringThymleafApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/entity/People0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/resources/templates/hello.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/test/java/com/example/springthymleaf/SpringThymleafApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-thymleaf/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-thymleaf/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/src/main/java/com/example/self_study_java6/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/src/main/java/com/example/self_study_java6/SelfStudyJava6Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/src/main/java/com/example/self_study_java6/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../self_study_java6/src/test/java/com/example/self_study_java6/SelfStudyJava6ApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/com/example/springthymleaf/config/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-thymleaf/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-thymleaf/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/com/example/springthymleaf/SpringThymleafApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/java/com/example/springthymleaf/SpringThymleafApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-thymleaf/src/main/resources/message_vi_VN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-thymleaf/src/main/resources/message.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-thymleaf" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -84,17 +66,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +101,7 @@
       <workItem from="1690186970242" duration="4667000" />
       <workItem from="1690193394974" duration="60000" />
       <workItem from="1690193468532" duration="531000" />
+      <workItem from="1690856204518" duration="29000" />
     </task>
     <servers />
   </component>

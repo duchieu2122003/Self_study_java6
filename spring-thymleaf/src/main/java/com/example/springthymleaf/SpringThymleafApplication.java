@@ -9,18 +9,116 @@ import com.example.springthymleaf.entity.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 @SpringBootApplication
+class HocSinh {
+    private String ten;
+    private Integer diem;
+
+    public HocSinh() {
+    }
+
+    public HocSinh(String ten, Integer diem) {
+        this.ten = ten;
+        this.diem = diem;
+    }
+
+    @Override
+    public String toString() {
+        return "HocSinh{" +
+                "ten='" + ten + '\'' +
+                ", diem=" + diem +
+                '}';
+    }
+
+    public void setTen(String ten) {
+        this.ten = ten;
+    }
+
+    public void setDiem(Integer diem) {
+        this.diem = diem;
+    }
+
+    public String getTen() {
+        return ten;
+    }
+
+    public Integer getDiem() {
+        return diem;
+    }
+}
+
 public class SpringThymleafApplication {
 
-    public static void main(String[] args) throws IOException {
-        SpringApplication.run(SpringThymleafApplication.class, args);
 
+    public static void main(String[] args) throws IOException {
+        // SpringApplication.run(SpringThymleafApplication.class, args);
+        hoc1();
     }
+
+    private static void hoc1() {
+        // int tong =  listSoNguyen.stream().filter(a -> a%2==0).reduce(0,(a1,a2)-> a1+a2);
+        int tong = listSoNguyen.stream().filter(a -> a % 2 == 0).reduce(0, Integer::sum);
+        //.sum();
+        double tich = listSoNguyen.stream()
+                .filter(a -> a % 2 != 0).reduce(1, (a1, a2) -> a1 * a2);
+        int tongBinhP = listSoNguyen.stream()
+                .filter(a -> a % 2 != 0).reduce(0, (a1, a2) ->
+                        (int) Math.pow(a1 + a2, 2));
+        // trung binh cong cac so le
+        System.out.println("sum: " + tong);
+        System.out.println("tich: " + tich);
+        System.out.println("tongBinhPhuongSoLe: " + tongBinhP);
+        // b2 •	Lọc ra các sản phẩm có giá bán từ 100.000 đồng tới 500.000 đồng.
+//        List<Product> result  = listSP.stream()
+//                .filter(n -> n.getGiaSanPham() >= 100000 && n.getGiaSanPham() <= 500000)
+//                .collect(Collectors.toList());
+//        result.forEach(sp -> {
+//            System.out.println("Sản phẩm có giá > 100.000 và < 500.000: "+ sp.getTenSanPham());
+//        });
+        List<Product> listPro = new ArrayList<>();
+        listPro.add(new Product("A", 1200F));
+        listPro.add(new Product("B", 2F));
+        listPro.add(new Product("C", 80000F));
+        listPro.add(new Product("D", 15F));
+        listPro.stream().filter(a -> a.getGia() <= 500 && a.getGia() >= 2).forEach(System.out::println);
+        //•	Tính tổng giá bán của tất cả các sản phẩm.
+        Float sumLi = listPro.stream().map(o -> o.getGia()).reduce(0f, Float::sum);
+        System.out.println("sum k: " + sumLi);
+        //•	Tìm sản phẩm có giá bán cao nhất.
+        //c1
+        Optional<Product> productWithMaxPrice = listPro.stream()
+                .max(Comparator.comparing(Product::getGia));
+        // c2
+//        Product productWithMaxPrice = listPro.stream()
+//                .max((o1,o2) -> o1.getGia() > o2.getGia() ? 1:-1).get();
+        System.out.println("sp gia max: " + productWithMaxPrice.toString());
+        //3.	Tạo một danh sách các học sinh với thông tin gồm tên học sinh và điểm số. Hãy sử dụng Stream để thực hiện các tác vụ sau:
+        //•	Lọc ra các học sinh có điểm số lớn hơn hoặc bằng 8.
+        //•	Tính điểm trung bình của tất cả các học sinh.
+        //•	Tìm học sinh có điểm số cao nhất.
+        List<HocSinh> listStudent = new ArrayList<>();
+        listStudent.add(new HocSinh("A", 5));
+        listStudent.add(new HocSinh("B", 6));
+        listStudent.add(new HocSinh("C", 7));
+        listStudent.add(new HocSinh("D", 8));
+        listStudent.add(new HocSinh("E", 9));
+        //diem >= 8
+        listStudent.stream()
+                .filter(a -> a.getDiem() >= 8).forEach(System.out::println);
+        // diem trung binh all student
+        Double avg = listStudent.stream().mapToDouble(n -> n.getDiem()).average().getAsDouble();
+       // c2 avg
+       // int avg2 = listStudent.stream().map(HocSinh::getDiem).reduce(0, Integer::sum)/listStudent.size();
+        System.out.println("Diem trung binh all: " + avg);
+        // student cos diem max 2 cach
+        Optional<HocSinh> hsDiemMax = listStudent.stream().max(Comparator.comparing(HocSinh::getDiem));
+        HocSinh max_sv = listStudent.stream().reduce(listStudent.get(0), (max, sv) -> sv.getDiem() > max.getDiem() ? sv : max);
+        System.out.println("Hoc sinh diem max: " + max_sv);
+    }
+
+    static List<Integer> listSoNguyen = Arrays.asList(1, 24, 34, 4, 5, 7);
 
     static List<Student> list = Arrays.asList(new Student("Hieu", true, 9.0),
             new Student("A", true, 7.4), new Student("B", false, 8.5),
